@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todolist.Views.MaListe"
+			 Title="Ma Liste">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Ajouter" Clicked="ToolbarItem_ClickedAsync"/>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ListView x:Name="CitiesListView" ItemsSource="{Binding Items}"
+                      VerticalOptions="FillAndExpand" HasUnevenRows="True"
+                      IsPullToRefreshEnabled="True"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsRefreshing="{Binding IsBusy, Mode=Default}"
+                      ItemSelected="OnSelectedItem">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Padding="10">
+							<Label Text="{Binding text}" LineBreakMode="NoWrap" FontSize="16" />
+							<Label Text="{Binding description}"  LineBreakMode="NoWrap" FontSize="10"/>
+							<Label Text="{Binding doneDate}" LineBreakMode="NoWrap" FontSize="10"/>
+							<Image Source="https://media.istockphoto.com/vectors/thumb-up-emoticon-vector-id544662460" HeightRequest="16" WidthRequest="16" IsVisible="{Binding isDone}"/>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

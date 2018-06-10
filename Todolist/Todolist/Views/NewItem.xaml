@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todolist.Views.NewItem"
+			 Title="Nouvel item">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Ajouter" Clicked="ToolbarItem_ClickedAsync"/>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent">
+			<Entry x:Name="eItemText" Placeholder="Titre de la tâche" WidthRequest="150" />
+			<Entry x:Name="eItemDescription" Placeholder="Description" WidthRequest="150" />
+			<Button x:Name="bEnregistrer" Text="Enregistrer" Clicked="bEnregistrer_ClickedAsync"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+
+

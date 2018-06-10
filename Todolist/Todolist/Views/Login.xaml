@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todolist.Views.Login">
+    <ContentPage.Content>
+		<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" >
+			<Label Text="Connecte toi !" FontSize="Large" TextColor="#E12D53" HorizontalOptions="Center"/>
+			<Entry x:Name="eLogin" Placeholder="Email" HorizontalOptions="Center" WidthRequest="150" />
+			<Entry x:Name="epassword" Placeholder="Mot de passe" IsPassword="True" HorizontalOptions="Center" WidthRequest="150" />
+			<Button x:Name="button_Valid" Text="Connexion" HorizontalOptions="Center" BackgroundColor="#E12D53" TextColor="White" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

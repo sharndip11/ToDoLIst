@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			xmlns:pages="clr-namespace:Todolist.Views"
+			x:Class="Todolist.Views.Master"
+			Title="Ma TodoList">
+	<TabbedPage.Children>
+		<NavigationPage Title="Ma liste">
+			<x:Arguments>
+				<pages:MaListe />
+			</x:Arguments>
+		</NavigationPage>
+		<NavigationPage Title="A propos de">
+			<x:Arguments>
+				<pages:APropos />
+			</x:Arguments>
+		</NavigationPage>
+	</TabbedPage.Children>
+</TabbedPage>
